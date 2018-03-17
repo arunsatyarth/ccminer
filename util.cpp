@@ -2120,6 +2120,7 @@ static uint32_t zrtest[20] = {
 
 void do_gpu_tests(void)
 {
+	/*
 #ifdef _DEBUG
 	unsigned long done;
 	char s[128] = { '\0' };
@@ -2143,6 +2144,7 @@ void do_gpu_tests(void)
 	work_restart = NULL;
 	opt_tracegpu = false;
 #endif
+	*/
 }
 
 void print_hash_tests(void)
@@ -2159,7 +2161,7 @@ void print_hash_tests(void)
 	// buf[0] = 1; buf[64] = 2; // for endian tests
 
 	printf(CL_WHT "CPU HASH ON EMPTY BUFFER RESULTS:" CL_N "\n");
-
+	/*
 	bastionhash(&hash[0], &buf[0]);
 	printpfx("bastion", hash);
 
@@ -2267,12 +2269,14 @@ void print_hash_tests(void)
 
 	sibhash(&hash[0], &buf[0]);
 	printpfx("sib", hash);
-
+	*/
 	skeincoinhash(&hash[0], &buf[0]);
 	printpfx("skein", hash);
 
 	skein2hash(&hash[0], &buf[0]);
 	printpfx("skein2", hash);
+
+	/*
 
 	skunk_hash(&hash[0], &buf[0]);
 	printpfx("skunk", hash);
@@ -2325,6 +2329,7 @@ void print_hash_tests(void)
 	printpfx("ZR5", hash);
 
 	printf("\n");
+	*/
 
 	do_gpu_tests();
 
