@@ -279,11 +279,8 @@
     <ClInclude Include="compat\unistd.h" />
     <ClInclude Include="compat\winansi.h" />
     <ClInclude Include="compat\ccminer-config.h" />
-    <ClInclude Include="cuda_groestlcoin.h" />
     <ClInclude Include="cuda_helper.h" />
-    <ClInclude Include="cuda_vector_uint2x4.h" />
     <ClInclude Include="elist.h" />
-    <ClInclude Include="heavy\heavy.h" />
     <ClInclude Include="algos.h" />
     <ClInclude Include="miner.h" />
     <ClInclude Include="nvml.h" />
@@ -291,35 +288,10 @@
     <ClInclude Include="quark\cuda_quark_groestl512_sm2.cuh" />
     <ClInclude Include="quark\cuda_quark_blake512_sp.cuh" />
     <ClInclude Include="res\resource.h" />
-    <ClInclude Include="sph\blake2b.h" />
-    <ClInclude Include="sph\blake2s.h" />
-    <ClInclude Include="sph\sph_blake.h" />
-    <ClInclude Include="sph\sph_bmw.h" />
-    <ClInclude Include="sph\sph_cubehash.h" />
-    <ClInclude Include="sph\sph_echo.h" />
-    <ClInclude Include="sph\sph_fugue.h" />
-    <ClInclude Include="sph\sph_groestl.h" />
-    <ClInclude Include="sph\sph_haval.h" />
-    <ClInclude Include="sph\sph_jh.h" />
-    <ClInclude Include="sph\sph_keccak.h" />
-    <ClInclude Include="sph\sph_luffa.h" />
-    <ClInclude Include="sph\sph_sha2.h" />
-    <ClInclude Include="sph\sph_shabal.h" />
-    <ClInclude Include="sph\sph_shavite.h" />
-    <ClInclude Include="sph\sph_simd.h" />
     <ClInclude Include="sph\sph_skein.h" />
-    <ClInclude Include="sph\sph_streebog.h" />
-    <ClInclude Include="sph\sph_hamsi.h" />
-    <ClInclude Include="sph\sph_types.h" />
-    <ClInclude Include="sph\sph_whirlpool.h" />
     <ClInclude Include="uint256.h" />
-    <ClInclude Include="lyra2\Lyra2.h" />
-    <ClInclude Include="lyra2\Sponge.h" />
-    <ClInclude Include="lyra2\Lyra2Z.h" />
     <ClInclude Include="quark\groestl_transf_quad.h" />
     <ClInclude Include="quark\groestl_functions_quad.h" />
-    <ClInclude Include="quark\cuda_quark.h" />
-    <ClInclude Include="x11\cuda_x11.h" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cuda.cpp" />

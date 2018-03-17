@@ -46,9 +46,6 @@
     <Filter Include="Source Files\CUDA\Algo256">
       <UniqueIdentifier>{9762c92c-9677-4044-8292-ff6ba4bfdd89}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\lyra2">
-      <UniqueIdentifier>{2ff6e4ce-7c92-4cb2-a3ad-c331e94fd81d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Ressources">
       <UniqueIdentifier>{f5117ccb-a70d-411a-b7ea-d6faed230bc7}</UniqueIdentifier>
     </Filter>
@@ -197,86 +194,11 @@
     <ClInclude Include="uint256.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cuda_groestlcoin.h">
-      <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="quark\cuda_quark.h">
-      <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="x11\cuda_x11.h">
-      <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\blake2b.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\blake2s.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_blake.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_bmw.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_cubehash.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_echo.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_fugue.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_groestl.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_jh.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_keccak.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_luffa.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_shavite.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_simd.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
     <ClInclude Include="sph\sph_skein.h">
       <Filter>Header Files\sph</Filter>
     </ClInclude>
-    <ClInclude Include="sph\sph_types.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="heavy\heavy.h">
-      <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
     <ClInclude Include="cuda_helper.h">
       <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="cuda_vector_uint2x4.h">
-      <Filter>Header Files\CUDA</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_hamsi.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_shabal.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_streebog.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_whirlpool.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_haval.h">
-      <Filter>Header Files\sph</Filter>
-    </ClInclude>
-    <ClInclude Include="sph\sph_sha2.h">
-      <Filter>Header Files\sph</Filter>
     </ClInclude>
     <ClInclude Include="compat\winansi.h">
       <Filter>Header Files\compat</Filter>
@@ -313,15 +235,6 @@
     </ClInclude>
     <ClInclude Include="compat\jansson\jansson_config.h">
       <Filter>Header Files\compat</Filter>
-    </ClInclude>
-    <ClInclude Include="lyra2\Lyra2.h">
-      <Filter>Header Files\lyra2</Filter>
-    </ClInclude>
-    <ClInclude Include="lyra2\Lyra2Z.h">
-      <Filter>Header Files\lyra2</Filter>
-    </ClInclude>
-    <ClInclude Include="lyra2\Sponge.h">
-      <Filter>Header Files\lyra2</Filter>
     </ClInclude>
     <ClInclude Include="quark\groestl_transf_quad.h">
       <Filter>Source Files\CUDA\quark</Filter>
