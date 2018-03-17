@@ -144,12 +144,6 @@
     <ClCompile Include="nvsettings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\wildkeccak-cpu.cpp">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\xmr-rpc.cpp">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClCompile>
     <ClCompile Include="sph\sha2.c">
       <Filter>Source Files\CUDA\sha256</Filter>
     </ClCompile>
@@ -236,46 +230,16 @@
     <ClInclude Include="compat\jansson\jansson_config.h">
       <Filter>Header Files\compat</Filter>
     </ClInclude>
-    <ClInclude Include="quark\groestl_transf_quad.h">
-      <Filter>Source Files\CUDA\quark</Filter>
-    </ClInclude>
-    <ClInclude Include="quark\groestl_functions_quad.h">
-      <Filter>Source Files\CUDA\quark</Filter>
-    </ClInclude>
     <ClInclude Include="res\resource.h">
       <Filter>Ressources</Filter>
     </ClInclude>
     <ClInclude Include="bignum.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="quark\cuda_quark_blake512_sp.cuh">
-      <Filter>Source Files\CUDA\quark</Filter>
-    </ClInclude>
-    <ClInclude Include="quark\cuda_bmw512_sm3.cuh">
-      <Filter>Source Files\CUDA\quark</Filter>
-    </ClInclude>
-    <ClInclude Include="quark\cuda_quark_groestl512_sm2.cuh">
-      <Filter>Source Files\CUDA\quark</Filter>
-    </ClInclude>
     <ClInclude Include="crypto\cn_aes.cuh">
       <Filter>Source Files\CUDA\xmr</Filter>
     </ClInclude>
-    <ClInclude Include="crypto\cn_blake.cuh">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClInclude>
-    <ClInclude Include="crypto\cn_groestl.cuh">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClInclude>
-    <ClInclude Include="crypto\cn_jh.cuh">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClInclude>
-    <ClInclude Include="crypto\cn_keccak.cuh">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClInclude>
     <ClInclude Include="crypto\cn_skein.cuh">
-      <Filter>Source Files\CUDA\xmr</Filter>
-    </ClInclude>
-    <ClInclude Include="crypto\xmr-rpc.h">
       <Filter>Source Files\CUDA\xmr</Filter>
     </ClInclude>
   </ItemGroup>
@@ -296,9 +260,6 @@
       <Filter>Source Files\CUDA</Filter>
     </CudaCompile>
     <CudaCompile Include="cuda_skeincoin.cu">
-      <Filter>Source Files\CUDA</Filter>
-    </CudaCompile>
-    <CudaCompile Include="crypto\wildkeccak.cu">
       <Filter>Source Files\CUDA</Filter>
     </CudaCompile>
     <CudaCompile Include="sha256\cuda_sha256d.cu">

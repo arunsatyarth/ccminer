@@ -229,8 +229,6 @@
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <Optimization Condition="'$(Configuration)'=='Release'">Full</Optimization>
     </ClCompile>
-    <ClCompile Include="crypto\wildkeccak-cpu.cpp" />
-    <ClCompile Include="crypto\xmr-rpc.cpp" />
     <ClCompile Include="nvapi.cpp" />
     <ClCompile Include="nvsettings.cpp" />
     <ClCompile Include="pools.cpp" />
@@ -247,16 +245,8 @@
     <ClCompile Include="api.cpp" />
     <ClCompile Include="sysinfos.cpp" />
     <ClCompile Include="crc32.c" />
-    <ClInclude Include="crypto\xmr-rpc.h" />
     <ClInclude Include="crypto\cn_aes.cuh" />
-    <ClInclude Include="crypto\cn_blake.cuh" />
-    <ClInclude Include="crypto\cn_groestl.cuh" />
-    <ClInclude Include="crypto\cn_jh.cuh" />
-    <ClInclude Include="crypto\cn_keccak.cuh" />
     <ClInclude Include="crypto\cn_skein.cuh" />
-    <CudaCompile Include="crypto\wildkeccak.cu">
-      <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
     <ClCompile Include="skein2.cpp" />
     <ClCompile Include="sph\skein.c" />
   </ItemGroup>
@@ -284,14 +274,9 @@
     <ClInclude Include="algos.h" />
     <ClInclude Include="miner.h" />
     <ClInclude Include="nvml.h" />
-    <ClInclude Include="quark\cuda_bmw512_sm3.cuh" />
-    <ClInclude Include="quark\cuda_quark_groestl512_sm2.cuh" />
-    <ClInclude Include="quark\cuda_quark_blake512_sp.cuh" />
     <ClInclude Include="res\resource.h" />
     <ClInclude Include="sph\sph_skein.h" />
     <ClInclude Include="uint256.h" />
-    <ClInclude Include="quark\groestl_transf_quad.h" />
-    <ClInclude Include="quark\groestl_functions_quad.h" />
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cuda.cpp" />

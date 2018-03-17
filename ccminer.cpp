@@ -695,10 +695,7 @@ static bool work_decode(const json_t *val, struct work *work)
 		data_size = 80;
 		adata_sz = data_size / 4;
 		break;
-	case ALGO_CRYPTOLIGHT:
-	case ALGO_CRYPTONIGHT:
-	case ALGO_WILDKECCAK:
-		return rpc2_job_decode(val, work);
+
 	default:
 		data_size = 128;
 		adata_sz = data_size / 4;
@@ -877,8 +874,8 @@ static bool submit_upstream_work(CURL *curl, struct work *work)
 		struct work submit_work;
 		memcpy(&submit_work, work, sizeof(struct work));
 		if (!hashlog_already_submittted(submit_work.job_id, submit_work.nonces[idnonce])) {
-			if (rpc2_stratum_submit(pool, &submit_work))
-				hashlog_remember_submit(&submit_work, submit_work.nonces[idnonce]);
+			//if (rpc2_stratum_submit(pool, &submit_work))
+				//hashlog_remember_submit(&submit_work, submit_work.nonces[idnonce]);
 			stratum.job.shares_count++;
 		}
 		return true;
@@ -1463,7 +1460,7 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 	int i;
 
 	if (sctx->rpc2)
-		return rpc2_stratum_gen_work(sctx, work);
+		return true;
 
 	if (!sctx->job.job_id) {
 		// applog(LOG_WARNING, "stratum_gen_work: job not yet retrieved");
@@ -2007,12 +2004,13 @@ static void *miner_thread(void *userdata)
 			gpulog(LOG_DEBUG, thr_id, "no data");
 			continue;
 		}
+		/*
 		if (opt_algo == ALGO_WILDKECCAK && !scratchpad_size) {
 			sleep(1);
 			if (!thr_id) pools[cur_pooln].wait_time += 1;
 			continue;
 		}
-
+		*/
 		/* conditional mining */
 		if (!wanna_mine(thr_id))
 		{
@@ -2694,9 +2692,9 @@ wait_stratum_url:
 			}
 		}
 
-		if (stratum.rpc2) {
-			rpc2_stratum_thread_stuff(pool);
-		}
+		//if (stratum.rpc2) {
+			//rpc2_stratum_thread_stuff(pool);
+		//}
 
 		if (switchn != pool_switch_count) goto pool_switched;
 
@@ -2910,7 +2908,7 @@ void parse_arg(int key, char *arg)
 		break;
 	}
 	case 'k':
-		opt_scratchpad_url = strdup(arg);
+		//opt_scratchpad_url = strdup(arg);
 		break;
 	case 'i':
 		d = atof(arg);
@@ -3711,16 +3709,7 @@ int main(int argc, char *argv[])
 		opt_extranonce = false; // disable subscribe
 	}
 
-	if (opt_algo == ALGO_CRYPTONIGHT || opt_algo == ALGO_CRYPTOLIGHT) {
-		rpc2_init();
-		if (!opt_quiet) applog(LOG_INFO, "Using JSON-RPC 2.0");
-	}
 
-	if (opt_algo == ALGO_WILDKECCAK) {
-		rpc2_init();
-		if (!opt_quiet) applog(LOG_INFO, "Using JSON-RPC 2.0");
-		GetScratchpad();
-	}
 
 	flags = !opt_benchmark && strncmp(rpc_url, "https:", 6)
 	      ? (CURL_GLOBAL_ALL & ~CURL_GLOBAL_SSL)

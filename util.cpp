@@ -1320,8 +1320,8 @@ bool stratum_authorize(struct stratum_ctx *sctx, const char *user, const char *p
 	json_error_t err;
 	bool ret = false;
 
-	if (sctx->rpc2)
-		return rpc2_stratum_authorize(sctx, user, pass);
+	//if (sctx->rpc2)
+		//return rpc2_stratum_authorize(sctx, user, pass);
 
 	s = (char*)malloc(80 + strlen(user) + strlen(pass));
 	sprintf(s, "{\"id\": 2, \"method\": \"mining.authorize\", \"params\": [\"%s\", \"%s\"]}",
@@ -1891,7 +1891,7 @@ bool stratum_handle_method(struct stratum_ctx *sctx, const char *s)
 		goto out;
 	}
 	if (sctx->rpc2 && !strcasecmp(method, "job")) { // xmr/bbr
-		ret = rpc2_stratum_job(sctx, id, params);
+		ret = true;
 		goto out;
 	}
 
