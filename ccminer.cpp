@@ -2335,12 +2335,6 @@ static void *miner_thread(void *userdata)
 		case ALGO_C11:
 			rc = scanhash_c11(thr_id, &work, max_nonce, &hashes_done);
 			break;
-		case ALGO_CRYPTOLIGHT:
-			rc = scanhash_cryptolight(thr_id, &work, max_nonce, &hashes_done);
-			break;
-		case ALGO_CRYPTONIGHT:
-			rc = scanhash_cryptonight(thr_id, &work, max_nonce, &hashes_done);
-			break;
 		case ALGO_DECRED:
 			rc = scanhash_decred(thr_id, &work, max_nonce, &hashes_done);
 			break;

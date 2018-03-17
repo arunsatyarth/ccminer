@@ -39,7 +39,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -228,14 +228,8 @@
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <Optimization Condition="'$(Configuration)'=='Release'">Full</Optimization>
     </ClCompile>
-    <ClCompile Include="crypto\mman.c" />
     <ClCompile Include="crypto\wildkeccak-cpu.cpp" />
     <ClCompile Include="crypto\xmr-rpc.cpp" />
-    <ClCompile Include="crypto\aesb.cpp" />
-    <ClCompile Include="crypto\oaes_lib.cpp" />
-    <ClCompile Include="crypto\cryptolight-cpu.cpp" />
-    <ClCompile Include="crypto\cryptonight-cpu.cpp" />
-    <ClCompile Include="crypto\cpu\c_keccak.c" />
     <ClCompile Include="equi\blake2\blake2bx.cpp">
       <EnableEnhancedInstructionSet Condition="'$(Platform)'=='Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
     </ClCompile>
@@ -262,6 +256,7 @@
     <ClCompile Include="lyra2\Lyra2.c" />
     <ClCompile Include="lyra2\Sponge.c" />
     <ClCompile Include="lyra2\Lyra2Z.c" />
+    <ClInclude Include="crypto\xmr-rpc.h" />
     <ClInclude Include="equi\eqcuda.hpp" />
     <ClInclude Include="equi\equihash.h" />
     <ClInclude Include="neoscrypt\neoscrypt.h" />
@@ -272,17 +267,6 @@
     <CudaCompile Include="Algo256\bmw.cu" />
     <CudaCompile Include="Algo256\cuda_bmw.cu">
       <MaxRegCount>76</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="crypto\cryptolight.cu" />
-    <CudaCompile Include="crypto\cryptolight-core.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="crypto\cryptonight.cu" />
-    <CudaCompile Include="crypto\cryptonight-core.cu">
-      <MaxRegCount>64</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="crypto\cryptonight-extra.cu">
-      <MaxRegCount>255</MaxRegCount>
     </CudaCompile>
     <ClInclude Include="crypto\cn_aes.cuh" />
     <ClInclude Include="crypto\cn_blake.cuh" />
@@ -352,11 +336,6 @@
     <ClInclude Include="compat\unistd.h" />
     <ClInclude Include="compat\winansi.h" />
     <ClInclude Include="compat\ccminer-config.h" />
-    <ClInclude Include="crypto\cryptolight.h" />
-    <ClInclude Include="crypto\cryptonight.h" />
-    <ClInclude Include="crypto\mman.h" />
-    <ClInclude Include="crypto\wildkeccak.h" />
-    <ClInclude Include="crypto\xmr-rpc.h" />
     <ClInclude Include="cuda_groestlcoin.h" />
     <ClInclude Include="cuda_helper.h" />
     <ClInclude Include="cuda_vector_uint2x4.h" />
@@ -606,7 +585,7 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.targets" />
   </ImportGroup>
   <!-- Copy the required dlls -->
   <Target Name="AfterBuild">

@@ -2178,11 +2178,6 @@ void print_hash_tests(void)
 	c11hash(&hash[0], &buf[0]);
 	printpfx("c11", hash);
 
-	cryptolight_hash(&hash[0], &buf[0], 76);
-	printpfx("cryptolight", hash);
-
-	cryptonight_hash(&hash[0], &buf[0], 76);
-	printpfx("cryptonight", hash);
 
 	memset(buf, 0, 180);
 	decred_hash(&hash[0], &buf[0]);
