@@ -1451,7 +1451,7 @@ static bool stratum_notify(struct stratum_ctx *sctx, json_t *params)
 	bool has_claim = !strcasecmp(algo, "lbry");
 
 	if (sctx->is_equihash) {
-		return equi_stratum_notify(sctx, params);
+		return true;
 	}
 
 	job_id = json_string_value(json_array_get(params, p++));
@@ -1783,7 +1783,7 @@ static bool stratum_show_message(struct stratum_ctx *sctx, json_t *id, json_t *p
 	bool ret;
 
 	if (sctx->is_equihash)
-		return equi_stratum_show_message(sctx, id, params);
+		return  true;
 
 	val = json_array_get(params, 0);
 	if (val)
@@ -1860,7 +1860,7 @@ bool stratum_handle_method(struct stratum_ctx *sctx, const char *s)
 	}
 	if (!strcasecmp(method, "mining.set_target")) {
 		sctx->is_equihash = true;
-		ret = equi_stratum_set_target(sctx, params);
+		ret = true;
 		goto out;
 	}
 	if (!strcasecmp(method, "mining.set_extranonce")) {

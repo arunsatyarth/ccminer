@@ -231,12 +231,6 @@
     </ClCompile>
     <ClCompile Include="crypto\wildkeccak-cpu.cpp" />
     <ClCompile Include="crypto\xmr-rpc.cpp" />
-    <ClCompile Include="equi\blake2\blake2bx.cpp">
-      <EnableEnhancedInstructionSet Condition="'$(Platform)'=='Win32'">StreamingSIMDExtensions</EnableEnhancedInstructionSet>
-    </ClCompile>
-    <ClCompile Include="equi\equi-stratum.cpp" />
-    <ClCompile Include="equi\equi.cpp" />
-    <ClCompile Include="equi\equihash.cpp" />
     <ClCompile Include="nvapi.cpp" />
     <ClCompile Include="nvsettings.cpp" />
     <ClCompile Include="pools.cpp" />
@@ -254,8 +248,6 @@
     <ClCompile Include="sysinfos.cpp" />
     <ClCompile Include="crc32.c" />
     <ClInclude Include="crypto\xmr-rpc.h" />
-    <ClInclude Include="equi\eqcuda.hpp" />
-    <ClInclude Include="equi\equihash.h" />
     <ClInclude Include="crypto\cn_aes.cuh" />
     <ClInclude Include="crypto\cn_blake.cuh" />
     <ClInclude Include="crypto\cn_groestl.cuh" />
@@ -264,12 +256,6 @@
     <ClInclude Include="crypto\cn_skein.cuh" />
     <CudaCompile Include="crypto\wildkeccak.cu">
       <MaxRegCount>128</MaxRegCount>
-    </CudaCompile>
-    <CudaCompile Include="equi\cuda_equi.cu">
-      <CodeGeneration>compute_52,sm_52;compute_50,sm_50;compute_30,sm_30</CodeGeneration>
-      <AdditionalOptions> -Xptxas -dlcm=ca -Xptxas -dscm=cs %(AdditionalOptions)</AdditionalOptions>
-      <MaxRegCount>0</MaxRegCount>
-      <CodeGeneration Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compute_61,sm_61;compute_52,sm_52;compute_50,sm_50;compute_30,sm_30</CodeGeneration>
     </CudaCompile>
     <ClCompile Include="skein2.cpp" />
     <ClCompile Include="sph\skein.c" />

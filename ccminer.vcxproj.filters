@@ -55,9 +55,6 @@
     <Filter Include="Source Files\CUDA\xmr">
       <UniqueIdentifier>{0f9aec5e-5409-488f-992a-2c108590d1ac}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\equi">
-      <UniqueIdentifier>{031afae7-2a78-4e32-9738-4b589b6f7ff3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\CUDA\sha256">
       <UniqueIdentifier>{de858634-650d-4ebb-9946-1e3aec4aebb9}</UniqueIdentifier>
     </Filter>
@@ -149,18 +146,6 @@
     </ClCompile>
     <ClCompile Include="nvsettings.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="equi\equi.cpp">
-      <Filter>Source Files\equi</Filter>
-    </ClCompile>
-    <ClCompile Include="equi\equihash.cpp">
-      <Filter>Source Files\equi</Filter>
-    </ClCompile>
-    <ClCompile Include="equi\equi-stratum.cpp">
-      <Filter>Source Files\equi</Filter>
-    </ClCompile>
-    <ClCompile Include="equi\blake2\blake2bx.cpp">
-      <Filter>Source Files\equi</Filter>
     </ClCompile>
     <ClCompile Include="crypto\wildkeccak-cpu.cpp">
       <Filter>Source Files\CUDA\xmr</Filter>
@@ -377,12 +362,6 @@
     <ClInclude Include="crypto\cn_skein.cuh">
       <Filter>Source Files\CUDA\xmr</Filter>
     </ClInclude>
-    <ClInclude Include="equi\eqcuda.hpp">
-      <Filter>Source Files\equi</Filter>
-    </ClInclude>
-    <ClInclude Include="equi\equihash.h">
-      <Filter>Source Files\equi</Filter>
-    </ClInclude>
     <ClInclude Include="crypto\xmr-rpc.h">
       <Filter>Source Files\CUDA\xmr</Filter>
     </ClInclude>
@@ -408,9 +387,6 @@
     </CudaCompile>
     <CudaCompile Include="crypto\wildkeccak.cu">
       <Filter>Source Files\CUDA</Filter>
-    </CudaCompile>
-    <CudaCompile Include="equi\cuda_equi.cu">
-      <Filter>Source Files\equi</Filter>
     </CudaCompile>
     <CudaCompile Include="sha256\cuda_sha256d.cu">
       <Filter>Source Files\CUDA\sha256</Filter>

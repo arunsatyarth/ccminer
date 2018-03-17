@@ -661,10 +661,7 @@ static void calc_network_diff(struct work *work)
 	if (opt_algo == ALGO_LBRY) nbits = swab32(work->data[26]);
 	if (opt_algo == ALGO_DECRED) nbits = work->data[29];
 	if (opt_algo == ALGO_SIA) nbits = work->data[11]; // unsure if correct
-	if (opt_algo == ALGO_EQUIHASH) {
-		net_diff = equi_network_diff(work);
-		return;
-	}
+
 
 	uint32_t bits = (nbits & 0xffffff);
 	int16_t shift = (swab32(nbits) & 0xff); // 0x1c = 28
@@ -888,13 +885,7 @@ static bool submit_upstream_work(CURL *curl, struct work *work)
 	}
 
 	if (pool->type & POOL_STRATUM && stratum.is_equihash) {
-		struct work submit_work;
-		memcpy(&submit_work, work, sizeof(struct work));
-		//if (!hashlog_already_submittted(submit_work.job_id, submit_work.nonces[idnonce])) {
-			if (equi_stratum_submit(pool, &submit_work))
-				hashlog_remember_submit(&submit_work, submit_work.nonces[idnonce]);
-			stratum.job.shares_count++;
-		//}
+
 		return true;
 	}
 
@@ -1656,9 +1647,7 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 		case ALGO_LYRA2:
 			work_set_target(work, sctx->job.diff / (128.0 * opt_difficulty));
 			break;
-		case ALGO_EQUIHASH:
-			equi_work_set_target(work, sctx->job.diff / opt_difficulty);
-			break;
+
 		default:
 			work_set_target(work, sctx->job.diff / opt_difficulty);
 	}
@@ -2262,10 +2251,7 @@ static void *miner_thread(void *userdata)
 		/* scan nonces for a proof-of-work hash */
 		switch (opt_algo) {
 
-		
-		case ALGO_EQUIHASH:
-			rc = scanhash_equihash(thr_id, &work, max_nonce, &hashes_done);
-			break;
+	
 	
 		case ALGO_SKEIN:
 			rc = scanhash_skeincoin(thr_id, &work, max_nonce, &hashes_done);
