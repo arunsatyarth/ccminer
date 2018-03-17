@@ -6,7 +6,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 // Modified for CPUminer by Lucas Jones
-// Adapted for ccminer by Tanguy Pruvot - 2016
+// Adapted for nvidiaminer by Tanguy Pruvot - 2016
 
 #include <errno.h>
 #include <unistd.h>

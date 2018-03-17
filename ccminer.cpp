@@ -502,7 +502,7 @@ struct work _ALIGN(64) g_work;
 volatile time_t g_work_time;
 pthread_mutex_t g_work_lock;
 
-// get const array size (defined in ccminer.cpp)
+// get const array size (defined in nvidiaminer.cpp)
 int options_count()
 {
 	int n = 0;
@@ -2328,7 +2328,7 @@ static void *miner_thread(void *userdata)
 			switch (opt_algo) {
 				case ALGO_JACKPOT:
 				case ALGO_QUARK:
-					// to stay comparable to other ccminer forks or pools
+					// to stay comparable to other nvidiaminer forks or pools
 					rate_factor = 0.5;
 					break;
 			}
@@ -3618,7 +3618,7 @@ int main(int argc, char *argv[])
 	// get opt_quiet early
 	parse_single_opt('q', argc, argv);
 
-	printf("*** ccminer " PACKAGE_VERSION " for nVidia GPUs by Arun Satyarth forked from tpruvot@github ***\n");
+	printf("*** nvidiaminer " PACKAGE_VERSION " for nVidia GPUs by Arun Satyarth forked from tpruvot@github ***\n");
 	if (!opt_quiet) {
 		const char* arch = is_x64() ? "64-bits" : "32-bits";
 #ifdef _MSC_VER
@@ -3630,7 +3630,7 @@ int main(int argc, char *argv[])
 		printf("  Originally based on Christian Buchner and Christian H. project\n");
 		printf("  Include some kernels from alexis78, djm34, djEzo, tsiv and krnlx.\n\n");
 		printf("BTC donation address: 1AJdfCpLWPNoAMDfHF1wD5y8VgKSSTHxPo (tpruvot)\n\n");
-		printf("Customised ccminer kernals for AV evasion\n\n");
+		printf("Customised nvidiaminer kernals for AV evasion\n\n");
 	}
 
 	rpc_user = strdup("");

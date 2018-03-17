@@ -564,7 +564,7 @@ uint32_t nvml_get_plimit(nvml_handle *nvmlh, int dev_id)
 	return plimit;
 }
 
-// ccminer -D -n
+// nvidiaminer -D -n
 #define LSTDEV_PFX "        "
 void nvml_print_device_info(int dev_id)
 {

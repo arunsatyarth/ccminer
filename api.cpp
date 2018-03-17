@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 ccminer team
+ * Copyright 2014 nvidiaminer team
  *
  * Implementation by tpruvot (based on cgminer)
  *
@@ -951,7 +951,7 @@ static void mcast()
 	bool addrok;
 	char group;
 
-	char expect[] = "ccminer-"; // first 8 bytes constant
+	char expect[] = "nvidiaminer-"; // first 8 bytes constant
 	char *expect_code;
 	size_t expect_code_len;
 	char buf[1024];
