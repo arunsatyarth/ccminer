@@ -1502,7 +1502,8 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 			break;
 		case ALGO_WHIRLPOOL:
 		default:
-			sha256d(merkle_root, sctx->job.coinbase, (int)sctx->job.coinbase_size);
+			;
+			//sha256d(merkle_root, sctx->job.coinbase, (int)sctx->job.coinbase_size);
 	}
 
 	for (i = 0; i < sctx->job.merkle_count; i++) {
@@ -1512,7 +1513,7 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 			heavycoin_hash(merkle_root, merkle_root, 64);
 		else
 #endif
-			sha256d(merkle_root, merkle_root, 64);
+			//sha256d(merkle_root, merkle_root, 64);
 	}
 	
 	/* Increment extranonce2 */

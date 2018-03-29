@@ -52,9 +52,6 @@
     <Filter Include="Source Files\CUDA\xmr">
       <UniqueIdentifier>{0f9aec5e-5409-488f-992a-2c108590d1ac}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\CUDA\sha256">
-      <UniqueIdentifier>{de858634-650d-4ebb-9946-1e3aec4aebb9}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="compat\jansson\dump.c">
@@ -143,15 +140,6 @@
     </ClCompile>
     <ClCompile Include="nvsettings.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="sph\sha2.c">
-      <Filter>Source Files\CUDA\sha256</Filter>
-    </ClCompile>
-    <ClCompile Include="sph\sha2big.c">
-      <Filter>Source Files\CUDA\sha256</Filter>
-    </ClCompile>
-    <ClCompile Include="sph\sph_sha2.c">
-      <Filter>Source Files\CUDA\sha256</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -261,18 +249,6 @@
     </CudaCompile>
     <CudaCompile Include="cuda_skeincoin.cu">
       <Filter>Source Files\CUDA</Filter>
-    </CudaCompile>
-    <CudaCompile Include="sha256\cuda_sha256d.cu">
-      <Filter>Source Files\CUDA\sha256</Filter>
-    </CudaCompile>
-    <CudaCompile Include="sha256\cuda_sha256t.cu">
-      <Filter>Source Files\CUDA\sha256</Filter>
-    </CudaCompile>
-    <CudaCompile Include="sha256\sha256d.cu">
-      <Filter>Source Files\CUDA\sha256</Filter>
-    </CudaCompile>
-    <CudaCompile Include="sha256\sha256t.cu">
-      <Filter>Source Files\CUDA\sha256</Filter>
     </CudaCompile>
   </ItemGroup>
   <ItemGroup>
